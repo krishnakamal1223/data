@@ -1,0 +1,772 @@
+JAVASCRIPT
+
+1)
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Javascript Sample</title>
+<script type="text/javascript">
+for(i=1;i<=5;i++){
+	document.write("Hello I am Javascript<br/>")
+}
+	</script>
+
+</head>
+<body>
+	<h1>Hello I am Body</h1>
+</body>
+</html>
+
+------------------------------------------------------------------
+Sample html
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<pre>
+<h1>
+About Me
+.....
+.....
+<a href ="main">CLICK GO TO TOP</a>
+<a href = "#dxc">About DXC</a> |
+<a href="#cmp">About Company</a> |
+<a href="#blr>About banglore</a> |
+
+
+
+
+
+<h1><font color="black" size="20" face="Vladimir Script">
+  Hello Kamal
+  </font></h1>
+
+----------------------------------------------------------------
+Product form
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Product Info</h1>
+	<table border = "3" cellspace="5" cellpadding="5">
+	<th>ProductId</th>
+	<th>ProductName</th>
+	<th>qoh</th>
+	<th>Price</th>
+	<tr>
+	   <td>100</td>
+	   <td>Mouse</td>
+	   <td colspan="2" align="center">250</td>
+	  </tr>
+	  <tr>
+	     <td>101</td>
+	     <td>Monitor</td>
+	     <td rowspan="2">20</td>
+	     <td>3500</td>
+	    </tr>
+	     <tr>
+	         <td>101</td>
+	    	 <td>Charger</td>
+	     	 <td>5000</td>
+	    </tr>
+	</table>
+</body>
+</html>
+
+================================================================
+Customer form
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action = "result.html">
+	<h2>Customer Form</h2>
+	<table cellspacing="10" align="center">
+	<tr><td>Customer Id : </td>
+	<td> <input type="text" name="customerId" id="customerId"></td>
+	</tr>
+	
+	<tr><td>Customer Name :</td>
+	<td> <input type ="text" name="customer Name" id="customer Name"></td></tr> 
+	<td>Price:</td>
+	<td> <input type ="text" name="Price" id="price"></td></tr>
+	<tr><td><input type = "submit" value ="save" ></td>
+	<td><input type = "Reset" value ="Clear" ></td>
+	</tr>
+	
+	
+	</table>
+</form>
+</body>
+</html>
+
+=========================================================
+LOGIN FORM
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Form</title>
+<script type="text/javascript">
+function validate(){
+	var uname = document.getElementById("Username").value;
+	var pwd=document.getElementById("Password").value
+	if(uname.length == 0){
+		alert("please enter your name")
+	}
+	else if(pwd.length==0)
+		{
+		alert("please enter the password")
+		}
+	else{
+		alert("Welcome :"+uname)
+	}
+}
+</script>
+</head>
+<body>
+<form action = "result.html">
+	<table cellspacing ="10"cellpadding="10">
+	<h1>Login Form</h1>
+	<tr><td>Username : </td>
+	<td><input type ="Username" name ="Username" id ="Username"></td></tr>
+	<tr><td>Password : </td>
+	<td><input type ="Password" name ="Password" id ="Password"></td></tr>
+	<tr><td><input type="submit" value="Login"></td>
+	<td><input type="Reset" value="clear"><td>
+	<input type="button" value="check" onclick="validate()"></td></tr>
+	
+	
+	</table>
+</form>
+	
+</body>
+</html>
+
+===========================================================
+SIGNUP FORM
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+ <form action = "result.html">
+	<h1>Registration Form</h1>
+	<table cellspacing="10" cellpadding="10">
+	<tr>
+	<td>First Name</td>
+	<td><input type ="text" name ="firstname" id="firstname"></td>
+	</tr>
+	<tr>
+	<td>Last Name</td>
+	<td><input type ="text" name ="Lastname" id="Lastname"></td>
+	</tr>
+	<tr>
+	<td>Gender</td>
+	<td>
+	<input type="radio" name="gender" id="male">Male
+	<input type="radio" name="gender" id="female">Female
+	<input type="radio" name="gender" id="trans">Others
+	</td>
+	</tr>
+	<tr>
+	<td>Hobbies</td>
+	<td>
+	<input type="checkbox"name="hobbies" value="Cricket">Cricket
+	<input type="checkbox"name="hobbies" value="Cricket">Badminton
+	<input type="checkbox"name="hobbies" value="Cricket">Foot Ball
+	</td>
+	</tr>
+	<tr>
+		<td>Qualification</td>
+		<td>
+		 <select name="qualification">
+		 	<option value="MCA">MCA</option>
+		 	<option value="MBA">MCA</option>
+		 	<option value="MTECH" selected="selected">Mtech</option>
+		 	<option value="BTech">Btech</option>
+		 </select>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<input type="submit" value="Signup">
+		<input type="submit" value="Register"formaction="Home.html">
+	    </table>			
+	    </form>
+</body>
+</html>
+
+===============================================================
+NEWFILE.HTML
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>DXC-Banglore</title>
+</head>
+<body bgcolor = "yellow" text ="red">
+   <h1>Welcome to DXC</h1>
+   <h2>Hello Kamal<br/> Employee of DXC </h2>
+   
+   <hr size ="50" color ="red" width ="60"/>
+   <hr size="50" color ="red" width ="80"/>
+   <hr size="50" color ="red" width ="100"/>
+   <hr size="50" color ="red" width ="120"/>
+   <br/>
+   <i>Hii</i>
+   <u>KAMAL</u>
+   <br/>
+   <center>
+     <img src="dxc1.jpg">
+   </center>
+</body>
+</html>
+
+==============================================================
+RESULT.HTML
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Message</title>
+</head>
+<body>
+<h1><center>Thank for submitting</center></h1>
+</body>
+</html>
+
+==============================================================
+Sum of two numbers:
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	var num1=prompt("please enter first Number :")
+	 num2 = prompt("please enter Second Number :")
+	var result = parseInt(num1)+parseInt(num2);
+	alert(result)
+	</script>
+<body>
+
+</body>
+</html>
+
+==============================================================
+Function Sample
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+function display()
+{
+	var num1=prompt("please enter first Number :")
+	 num2 = prompt("please enter Second Number :")
+	var result = parseInt(num1)+parseInt(num2);
+	alert(result)
+}
+function demo(name){
+	alert("welcome in alert");
+}
+</script>
+<body>
+<input type="button" value="Click" onclick="display()"><br/>
+<input type="button" value="Accept" onclick="demo()"><br/>
+</body>
+</html>
+
+===========================================================
+
+USING MULTIPLE FUNCTIONS:
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+function display()
+{
+	var num1=prompt("please enter first Number :")
+	 num2 = prompt("please enter Second Number :")
+	var result = parseInt(num1)+parseInt(num2);
+	alert(result)
+}
+function demo(name1,name2){
+	alert("welcome :"+name1+name2);
+}
+</script>
+<body>
+<input type="button" value="Click" onclick="display()"><br/>
+<input type="button" value="Accept" onclick="demo('Kamal')"><br/>
+<input type="button" value="Accept" onclick="demo('Kamal','Amulya')"><br/>
+</body>
+</html>
+
+==============================================================
+
+FUNCTION CALLING
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function sum(){
+	total=0;
+	y=20;
+	var x=10;
+	total=x+y;
+	}
+	function display(){
+	sum();
+	alert(total);
+	alert(y);
+	alert(x);
+	}
+	</script>
+</head>
+<body>
+<script>
+display()
+</script>
+
+</body>
+</html>
+
+=============================================================
+SUP() :
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+<center>document.write("A"+"2".sup()+"+"+"b"+"2".sup()+"="+"C"+"2".sup()) </center>;
+</script>
+</head>
+<body>
+</body>
+</html>
+
+===============================================================
+
+ELECTRICIYT BILL(DATE METHOD):
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	 bill = prompt("enter the Bill Amount")
+  	
+  	var today = new Date();
+	var date = today.getDate();
+	
+	if(date > 15)
+		{
+		excessdate = date-15
+		fine = excessdate * 50
+		finalamount = parseInt(bill) +fine
+		document.write("The total bill amount is :"+finalamount)
+		}
+	else{
+		document.write("The total bill amount is "+bill)
+	}
+  	
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+=============================================================
+METHODS(ONCLICK,ONFOCUS):
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function display1(){
+	alert("Hi I am display 1");
+}
+function display2(){
+	alert("Hi I am display 2");
+}
+function display3(){
+	alert("Hi I am Display 3")
+}
+</script>
+</head>
+<body>
+TextBox1:<input type="text" ><br/>
+TextBox2:<input type="text" onfocus ="display1()" onclick="display2()" onblur="display3()"><br/>
+</body>
+</html>
+
+
+==========================================================
+MATH(RANDOM)
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+  document.write("<br/>The random value is:"+Math.random()*9)
+
+</script>
+
+</head>
+<body>
+
+
+</body>
+</html>
+
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+
+</script>
+</head>
+<body>
+TextBox1:<input type="text" ><br/>
+TextBox2:
+<input type="text" onselect="display4()"
+onchange="alert('Hi i ama display5')"><br/>
+ <select name="qualification" onchange="alert('qualification changed')">
+		 	<option value="MCA">MCA</option>
+		 	<option value="MBA">MCA</option>
+		 	<option value="MTECH" selected="selected">Mtech</option>
+		 	<option value="BTech">Btech</option>
+		 </select>
+ 
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function display1(){
+	alert("Hi I am display 1");
+}
+function display2(){
+	alert("Hi I am display 2");
+}
+function display3(){
+	alert("Hi I am Display 3")
+}
+function display4(){
+	alert("Hi I am Display 4")
+}
+</script>
+</head>
+<body>
+TextBox1:<input type="text" ><br/>
+TextBox2:
+<input type="text"
+ onkeypress ="display1()" 
+ onkeyup="display2()" 
+ onkeydown="display3()"
+ onselect="display4()"
+ onchange="alert('Hi I am Display 5)"><br/>
+</body>
+</html>
+
+==========================================================
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+
+</script>
+</head>
+<body>
+TextBox1:<input type="text" ><br/>
+TextBox2:
+<input type="text" onselect="display4()"
+onchange="alert('Hi i ama display5')"><br/>
+ <select name="qualification" onchange="alert('qualification changed')">
+		 	<option value="MCA">MCA</option>
+		 	<option value="MBA">MCA</option>
+		 	<option value="MTECH" selected="selected">Mtech</option>
+		 	<option value="BTech">Btech</option>
+		 </select>
+ 
+
+</body>
+</html>
+
+=============================================================
+SPAN DEMO:
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function changeMessage() {
+	var divData1=document.getElementById("div1");
+	divData1.innerText = "<font color = red>Welcome to my Home"
+	var divData2 = document.getElementById("span2")
+	divData2.innerHTML = "<font color =greenn>Hello I am kamal"
+}
+</script>
+</head>
+<body>
+<div id ="div1">Good Morning</div>
+<div id ="div2">Good Night</div>
+<span id="span1">Message is :</span>
+<span id="span2">We are going to movie Now</span>
+<br/>
+<br/>
+<input type="button" value="GO" onclick="changeMessage()">
+</body>
+</html>
+
+===========================================================
+
+VALIDATION:
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function validateForm()
+{
+	alert("validate Form called")
+	var allData = new Array();
+	var result = new Boolean(true);
+	alert("The value of result is:"+result)
+	for(var i=0;i<10;i++){
+		allData[i] = document.forms[0].elements[i].value;
+		if(allData[i].length == 0){
+			alert("Please fill all the details")
+			result = false;
+			break;
+		}
+	}
+	if(result)
+		{
+		document.write("All the datas entered by you is:")
+		document.write(allData);
+		}
+	else{
+		document.write("Sorry, you have not filled all the data")
+	}
+	}
+
+</script>
+</head>
+<body>
+<form>
+*TextBox1 : <input type="text" name="textbox1" id="textbox1"><br/>
+*TextBox2 : <input type="text" name="textbox2" id="textbox2"><br/>
+*TextBox3 : <input type="text" name="textbox3" id="textbox3"><br/>
+*TextBox4 : <input type="text" name="textbox4" id="textbox4"><br/>
+*TextBox5 : <input type="text" name="textbox5" id="textbox5"><br/>
+*TextBox6 : <input type="text" name="textbox6" id="textbox6"><br/>
+*TextBox7 : <input type="text" name="textbox7" id="textbox7"><br/>
+*TextBox8 : <input type="text" name="textbox8" id="textbox8"><br/>
+*TextBox9 : <input type="text" name="textbox9" id="textbox9"><br/>
+*TextBox10 : <input type="text" name="textbox10" id="textbox10"><br/>
+<input type="button" value="Print" onclick="validateForm()">
+</form>
+</body>
+</html>
+
+
+==================================================================
+
+CONFIRM PASSWORD:
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function validatedetails(){
+	var uname=document.forms[0].elements[0].value;
+	var pwd=document.forms[0].elements[1].value;
+	var cpwd=document.forms[0].elements[2].value;
+	if(uname.length == 0){
+		alert("please enter your name")
+	}
+	else if(pwd.length == 0){
+		alert("please enter your password")
+	}
+	else if(pwd != cpwd){
+		alert(("password doesnt match"))
+	}
+	else if(pwd.length < 6 && pwd.length > 12){
+		alert("password should be 6-12 characters")
+	}
+	else
+		{
+		alert("welcome :"+uname)
+		}
+}
+	</script>
+</head>
+<body>
+<body>
+ <form action="result.html" name="myform" onsubmit="return validatedetails()">
+ <!-- This is a comment in HTML -->
+  <table cellspacing="10" cellpadding="10">
+   <h1>Login form</h1>
+   <tr> <td>Username :</td>
+    <td><input type="text" name="username" id="username"></td>
+   </tr>
+   <tr>
+    <td>Password :</td>
+    <td><input type="password" name="password" id="password"></td>
+   </tr>
+   <tr>
+    <td>Confirm Password :</td>
+    <td><input type="password" name="confirmpassword" id="confirmpassword"></td>
+   </tr>
+   <tr>
+    <td>
+    <input type="submit" value="Login1">
+    <input type="submit" value="Login2" onclick="window.location='Htmldemo.html'">
+    </td>
+    <td><input type="reset" value="Clear"></td>
+   </tr>
+  </table>
+ </form>
+
+</body>
+</html>
+
+===============================================================
+CONFIRM PASS WITH SPAN
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function validatedetails(){
+	var uname=document.forms[0].elements[0].value;
+	var pwd=document.forms[0].elements[1].value;
+	var cpwd=document.forms[0].elements[2].value;
+	var errUserName=document.getElementById("errUserName")
+	var errPassword = document.getElementById("errPassword")
+	var errConfirmPassword = document.getElementById("errConfirmPassword")
+	if(uname.length == 0){
+		errusername.innerHTML="<font color='red'>please enter username</font>"
+		return false;
+	}
+	else if(pwd.length == 0){
+		//alert("please enter your password")
+		errpassword.innerHTML = "<font color='red'>please enter password</font>"
+	}
+	else if(pwd != cpwd){
+		//alert(("password doesnt match"))
+		errconfirm.sassword.innerHTML = "<font color='red'>Password and confirm password does not match</font>"
+	}
+	else if(pwd.length < 6 && pwd.length > 12){
+		//alert("password should be 6-12 characters")
+		errpassword.innerHTML = "<font color ='red'>Password should be between 6-12 characters</font>"
+	}
+	else
+		{
+		alert("welcome :"+uname)
+		}
+}
+	</script>
+</head>
+<body>
+<body>
+ <form action="result.html" name="myform" onsubmit="return validatedetails()">
+ <!-- This is a comment in HTML -->
+  <table cellspacing="10" cellpadding="10">
+   <h1>Login form</h1>
+   <tr> <td>Username :</td>
+    <td><input type="text" name="username" id="username"></td>
+    <td><span id="errusername"></span></td>
+   </tr>
+   <tr>
+    <td>Password :</td>
+    <td><input type="password" name="password" id="password"></td>
+    <td><span id="errpassword"></span>
+   </tr>
+   <tr>
+    <td>Confirm Password :</td>
+    <td><input type="password" name="confirmpassword" id="confirmpassword"></td>
+    <td><span id="errconfirmpassword"></span>
+   </tr>
+   <tr>
+    <td>
+    <input type="submit" value="Login1">
+    </td>
+    <td><input type="reset" value="Clear"></td>
+   </tr>
+  </table>
+ </form>
+
+</body>
+</html>
+
