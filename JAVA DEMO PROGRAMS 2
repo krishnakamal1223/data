@@ -1,0 +1,833 @@
+CONSTANT DEFINITION:
+
+public class Consdef {
+	public void string(String str) {
+		System.out.println("Parameterized");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Consdef c = new Consdef();
+		c.string("kamal");
+
+	}
+
+}
+
+================================================================
+HASH CODE EXAMPLE :
+
+
+public class DXCEmployee {
+	private int eid;
+	private String ename;
+	private int salary;
+	
+	public DXCEmployee() {
+		
+	}
+	
+	
+
+	public DXCEmployee(int eid, String ename, int salary) {
+		super();
+		this.eid = eid;
+		this.ename = ename;
+		this.salary = salary;
+	}
+	
+	
+
+
+
+	@Override
+	public String toString() {
+		return "DXC [eid=" + eid + ", ename=" + ename + ", salary=" + salary + "]";
+	}
+	
+	
+
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + eid;
+		result = prime * result + ((ename == null) ? 0 : ename.hashCode());
+		result = prime * result + salary;
+		return result;
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DXCEmployee other = (DXCEmployee) obj;
+		if (eid != other.eid)
+			return false;
+		if (ename == null) {
+			if (other.ename != null)
+				return false;
+		} else if (!ename.equals(other.ename))
+			return false;
+		if (salary != other.salary)
+			return false;
+		return true;
+	}
+
+
+
+	public static void main(String[] args) {
+		DXCEmployee D1 = new DXCEmployee(1,"KAMAL",25000);
+		DXCEmployee D2 = new DXCEmployee(1,"KAMAL",25000);
+		System.out.println(D1.equals(D2));
+		System.out.println(D1.hashCode());
+		System.out.println(D2.hashCode());
+	
+
+	}
+
+}
+
+================================================================
+INHERITANCE:
+
+class Animal{
+	int age = 10;
+	public void eat() {
+		System.out.println("Animal should eat");
+	}
+}
+class Dog extends Animal
+{
+	String gener;
+	public void displayDogdetails() {
+		age = 5;
+		System.out.println("Tha age of dog is :"+age);
+	}
+}
+public class Inheritance {
+
+	public static void main(String[] args) {
+		Dog d = new Dog();
+		d.displayDogdetails();
+		d.eat();
+
+	}
+
+}
+
+==============================================================
+OVERRIDING.JAVA :
+
+class Wild {
+	int age = 1;
+	public void eat() {
+		System.out.println("Animal should eat");
+	}
+}
+class Horse extends Wild{
+	int age = 10;
+	public void display() {
+		int age = 5;
+		System.out.println("The local dog is:"+age);
+		System.out.println("The instance dog is:"+this.age);
+		System.out.println("The super class dog is :"+super.age);
+	}
+
+public void eat() {
+	super.eat();
+	System.out.println("Dogs eats meat");
+}
+public static class Overridding {
+	public static void main (String[] args) {
+		Wild w = new Wild();
+		w.eat();
+		((Horse) w).display();
+	}
+
+
+	}
+
+}
+
+================================================================
+PRODUCT DETAILS:
+
+
+public class Product {
+	
+	
+	private int productId;
+	private String productname;
+	private int quantityOnHand;
+	private int price;
+	public void product() {
+		productId = 100;
+        productname = "not available";
+        quantityOnHand = 500;
+        price = 10;
+	}
+	public Product(int productId,String productname) {
+		super();
+		this.productId = productId;
+		this.productname= productname;
+		
+	}
+	
+
+	public Product(int productId, String productname, int quantityOnHand, int price) {
+		super();
+		this.productId = productId;
+		this.productname = productname;
+		this.quantityOnHand = quantityOnHand;
+		this.price = price;
+	}
+	
+	
+	public void display() {
+		System.out.println("product Id :"+productId);
+		System.out.println("product name :"+productname);
+		System.out.println("product qoh :"+quantityOnHand);
+		System.out.println("product price :"+price);
+	}
+	public static void main(String[] args) {
+		Product p =new Product(178,"Lakme");
+		p.display();
+		Product p1 = new Product(200, "Monitor",1200,7500);
+		p1.display();
+
+	}
+
+}
+================================================================
+STRING BUFFER.JAVA :
+
+
+public class Strbuffer {
+	public static void main(String[] args) {
+		StringBuilder name = new StringBuilder("kalpana");
+		name.append("Sharma");
+		name.append("Sharma");
+		System.out.println(name);
+	}
+
+}
+
+================================================================
+STRING DEMO :
+
+
+public class Strdemo {
+	
+
+
+	public static void main(String[] args) {
+		Strdemo c1 = new Strdemo();
+		String name = "Kamal";
+		name.concat("Harsha");
+		System.out.println(name);
+		name.concat("Kal");
+		name = name + " JJ";
+		
+		System.out.println(name);
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+============================================================
+STRING DEMO2:
+
+
+public class Strdemo2 {
+	public static void main(String[] args) {
+		String name1 = "kamal";
+		String name2 = new String("kamal");
+		
+		System.out.println(name1.equals(name2));
+		System.out.println(name1==name2);
+	}
+
+	}
+
+
+
+=============================================================
+STUDENT DETAILS.JAVA
+
+
+public class Student {
+	private int rollnum;
+	private String studentname;
+	private String emailaddress;
+	private String studentaddress;
+	private int marks;
+	
+	public Student() {
+		
+	}
+	
+	
+	public Student(int rollnum, String studentname, String emailaddress, String studentaddress, int marks) {
+		super();
+		this.rollnum = rollnum;
+		this.studentname = studentname;
+		this.emailaddress = emailaddress;
+		this.studentaddress = studentaddress;
+		this.marks = marks;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Student [rollnum=" + rollnum + ", studentname=" + studentname + ", emailaddress=" + emailaddress
+				+ ", studentaddress=" + studentaddress + ", marks=" + marks + "]";
+	}
+
+
+	public static void main(String[] args) {
+		Student s = new Student(23,"kamal","kam@gmail.com","Buchi",80);
+		System.out.println(s);
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+===============================================================
+WRAPPER.JAVA
+
+
+public class Wrapper {
+	
+	public static void main(String[] args) {
+		  String m= "12";
+		  Integer i = Integer.parseInt(m);
+		  System.out.println(i+10);
+		  
+		  Integer p = 10;
+		  String str = String.valueOf(p);
+		  System.out.println(str+9);
+		 
+		 }
+
+}
+
+================================================================
+ARRAY DEMO :
+
+package Collectiondemo;
+import java.util.*;
+
+public class Demo1 {
+	public static void main(String[] args) {
+		
+		ArrayList names = new ArrayList();
+		names.add("kamal");
+		names.add("harsha");
+		names.add("siri");
+		names.add("ram");
+		names.add("ammu");
+		names.add("ravi");
+		
+		System.out.println(names);
+		
+		names.add(2, "java");
+		System.out.println(names);
+		
+		names.remove("ravi");
+		System.out.println(names);
+		
+		System.out.println(names.contains("jagan"));
+		
+		System.out.println(names.size());
+	}
+
+}
+
+===============================================================
+ARRAY WITH LINKEDLIST :
+
+package Collectiondemo;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
+
+public class Demo2 {
+	
+	public static void main(String args[]) {
+		List couponNumber = new LinkedList();
+		couponNumber.add(19181);
+		couponNumber.add(29182);
+		couponNumber.add(54183);
+		couponNumber.add(23122);
+		couponNumber.add(63343);
+		
+		Iterator iterator = couponNumber.iterator();
+		
+		while(iterator.hasNext());
+		{
+			System.out.println(iterator.next());
+		}
+	}
+
+}
+
+================================================================
+CUSTOMER DETAILS :
+
+package monday;
+
+
+public class Customer {
+	private int customerId;
+	private String customerName;
+	private String customerAddress;
+	private int billamount;
+
+	public Customer() {
+		super();
+		
+	}
+
+	public Customer(int customerid, String customerName, String customerAddress, int billamount) {
+		super();
+		this.customerId = customerid;
+		this.customerName = customerName;
+		this.customerAddress = customerAddress;
+		this.billamount = billamount;
+	}
+
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerAddress="
+				+ customerAddress + ", billamount=" + billamount + "]";
+	}
+	
+	public int getCustomerId() { 
+		return customerId;
+	}
+}
+	
+	
+===============================================================
+CUSTOMER DETAILS 2:
+
+package monday;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Customermain {
+	
+	public static void main(String[] args) {
+		ArrayList<Customer> customers = new ArrayList<Customer>();
+		
+		Customer customer1 = new Customer (11,"kamal","nellore",1000);
+		Customer customer2 = new Customer (12,"Harsha","Banglore",10000);
+		Customer customer3 = new Customer (11,"Pramod","chennai",20000);
+		
+		
+		customers.add(customer1);
+		customers.add(customer2);
+		customers.add(customer3);
+		
+		Iterator<Customer> iterCustomers = customers.iterator();
+		while(iterCustomers.hasNext()) {
+			Customer cust = iterCustomers.next();
+			System.out.println(cust);
+		}
+		
+
+	}
+
+}
+
+===============================================================
+TRY,CATCH FUNCTION :
+
+package monday;
+
+import java.util.Scanner;
+
+public class Demo {
+
+ int num1, num2, result;
+
+ public void display() {
+  Scanner sc = new Scanner(System.in);
+
+  System.out.println("Please enter first number :");
+  num1 = sc.nextInt();
+
+  System.out.println("Please enter second number :");
+  num2 = sc.nextInt();
+
+  try {
+   result = num1 / num2;
+  } catch ( Exception e) {
+	  System.out.println(e);
+  }
+  finally {
+	  System.out.println("Hi I am finally block");
+  }
+  
+  System.out.println("The result is : " + result);
+ }
+
+ public static void main(String[] args) {
+  System.out.println("Hello, Program started");
+  Demo d = new Demo();
+  d.display();
+  System.out.println("Bye, Program ended");
+ }
+}
+
+===============================================================
+ITERATOR :
+
+package monday;
+
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Demo1 {
+	
+	public static void main(String[] args) {
+		Set<String> set = new TreeSet<String>();
+		
+		set.add("kapoor");
+		set.add("Jay");
+		set.add("Anu");
+		set.add("Mohan");
+		set.add("Anu");
+		
+		Iterator<String> nameIterator = set.iterator();
+		
+		while(nameIterator.hasNext())
+		{
+			String value = nameIterator.next();
+			System.out.println(value);
+		}
+		
+		
+	}
+
+}
+
+==============================================================
+ENHANCED LOOP:
+
+package monday;
+
+public class Enhancedloop {
+	public static void main(String[] args) {
+		String names[] = {"Kamal","Amulya","Nikitha","Ravi"	};
+		System.out.println("Printing by enhance for loop(jdk1.5) :");
+		
+		for (String s:names)
+		{
+			System.out.println(s);
+		}
+		
+		int marks[] = {12,23,26,10};
+		for (int p:marks) {
+			System.out.println(p);
+		}
+	}
+}
+
+==============================================================
+HASH SET:
+
+package monday;
+
+
+import java.util.HashSet;
+import java.util.Set;
+
+
+public class Linked1 {
+
+	public static void main(String[] args) {
+		
+		Set set = new HashSet();
+		
+		set.add("kapoor");
+		set.add("jay");
+		set.add("Anu");
+		set.add("zeba");
+		
+		System.out.println(set);
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+================================================================
+LINKED HASHSET :
+
+package monday;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class Linked2 {
+
+	public static void main(String[] args) {
+		
+		Set set = new LinkedHashSet();
+		
+		set.add("kapoor");
+		set.add("jay");
+		set.add("Anu");
+		set.add("zeba");
+		
+		System.out.println(set);
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+============================================================
+TREESET :
+
+package monday;
+
+import java.util.NavigableSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Linked3 {
+
+ public static void main(String[] args) {
+  TreeSet set = new TreeSet();
+  NavigableSet names = set.descendingSet();
+  
+  names.add("Kapoor");
+  names.add("Jay");
+  names.add("Anu");
+  names.add("Zeba");
+  names.add("Mohan");
+  names.add("Anu");
+  
+  System.out.println(set);
+  
+  System.out.println(names);
+ }
+
+}
+
+==============================================================
+MAPDEMO :
+
+package monday;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.Iterator;
+
+public class Mapdemo {
+	
+	public static void main(String[] args) {
+		Map<String,Integer>playersDetails = new LinkedHashMap<String,Integer>();
+		
+		playersDetails.put("Sachin",98171);
+		playersDetails.put("virat",78525);
+		playersDetails.put("Sachin",78655);
+		playersDetails.put("Rohith",72363);
+		
+		//System.out.println(playersDetails);
+		
+		Set<Map.Entry<String,Integer>> set = playersDetails.entry;
+		
+		Iterator<Entry<String,Integer>> i = set.iterator();
+		
+		Set set = playersDetails.entrySet();
+		
+		Iterator i = set.iterator();
+		
+		while(i.hasNext()) {
+			Map.Entry data = (Map.Entry) i.next();
+			System.out.println(data.getKey() + "  "+data.getValue());
+		
+		
+	}
+
+}
+}
+
+===============================================================
+THREAD DEMO :
+
+package monday;
+
+public class Threaddemo extends Thread {
+	Thread t1;
+	public Threaddemo() {
+		t1 = new Thread(this);
+		t1.start();
+	}
+	public void run() {
+		System.out.println("RUN CALLED BY :"+Thread.currentThread().getName());
+		try {
+			Thread.sleep(2000);
+		}catch(InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		new Threaddemo();
+		System.out.println("Program started :"+Threaddemo.currentThread().getName());
+		
+
+	}
+
+}
+
+===============================================================
+THREAD DEMO 1:
+
+package monday;
+
+public class Threaddemo1 extends Thread{
+
+		Thread t1,t2;
+		public Threaddemo1() {
+			t1 = new Thread(this);
+			t1.start();
+			t2 = new Thread(this);
+			t2.start();
+		}
+		public void run() {
+			
+			printMessage.sayHello("Hello from", "KAMAL");
+			
+		}
+		public static void main(String[] args) {
+			new Threaddemo1();
+		}
+	static class printMessage{
+		static synchronized void sayHello(String msg1, String msg2) {
+			System.out.println("Message 1 is :"+msg1);
+			System.out.println("Message 2 is :"+msg2);
+			try {
+				Thread.sleep(2000);
+			}catch(InterruptedException e) {
+				e.printStackTrace();
+			}
+	}
+	}
+	}
+
+===============================================================
+INHERITANCE DEMO :
+
+package Saturday;
+
+abstract class Animal {
+	public abstract void eat();
+	public abstract void walk();
+	public void sleep() {
+		System.out.println("Animals are sleeping");
+	}
+}	
+	//concrete class
+	class Dog extends Animal
+	{
+
+		@Override
+		public void eat() {
+			System.out.println("Animals eats meat");
+		
+		}
+
+		@Override
+		public void walk() {
+			System.out.println("Animal walks in different ways");
+			
+		}
+		
+	}
+
+
+public class Inheritance {
+
+	public static void main(String[] args) {
+		Dog d =new Dog();
+		d.eat();
+		d.sleep();
+		d.walk();
+		
+	}
+}
+
+
+
+==============================================================
+INTERFACE DEMO :
+
+package Saturday;
+interface Radio{
+	int STATION_NUMBER = 90;
+	void changeFrequency();
+}
+interface Musicplayer{
+	void play();
+	void pause();
+}
+class Electronicdevice{
+	int price;
+	String modelname;
+}
+class Mobilephone extends Electronicdevice implements Radio,Musicplayer {
+	public void changeFrequency() {
+		System.out.println("Changing the frequency to :"+STATION_NUMBER);
+	}
+
+	@Override
+	public void play() {
+		System.out.println("Mobile songs Started");
+		
+	}
+
+	@Override
+	public void pause() {
+		System.out.println("Mobile songs paused");
+		
+	}
+	
+}
+
+public class Interfacedemo {
+
+	public static void main(String[] args) {
+		Mobilephone Honor8x = new Mobilephone();
+		Honor8x.changeFrequency();
+		Honor8x.play();
+		Honor8x.pause();
+
+	}
+
+}
+
+=============================================================
