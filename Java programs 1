@@ -1,0 +1,688 @@
+HELLO.JAVA
+
+public class Hello {
+	
+	public void corona() {
+		System.out.println("Due to corona everyone should work from home");
+	}
+	
+	public void display()
+	{
+		Hello h = new Hello();
+		h.corona();
+		System.out.println("Hello");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("HELLO, Welcome to DXC");
+		System.out.println("THANK YOU");
+		Hello h = new Hello();
+		h.display();
+
+	}
+
+}
+
+==================================================================
+
+OPERATORS.JAVA
+
+public class Demo {
+	
+	int num1 = 100,num2 = 200, num3 = 300;
+	public void display()
+	{
+		boolean result = num1 < num2 || num2 > num3;
+		System.out.println("Result is : "+result);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Demo d = new Demo();
+		d.display();
+	}
+
+}
+
+===============================================================
+SAMPLE PRINT STATEMENTS
+
+public class Demo1 {
+	int num;
+	{
+		num = 10;
+		System.out.println("DXC-Banglore");
+	}
+	public void display() {
+		System.out.println("Hi");
+		Demo1 d = new Demo1();
+	}
+	public static void main(String[] args) {
+		System.out.println("Hello");
+		Demo1 d = new Demo1();
+		d.display();
+		d.printbye();
+	}
+	public void printbye() {
+		System.out.println("bye");
+	}
+
+}
+
+==============================================================
+
+SUM.JAVA
+
+
+public class Demo3 {
+	int num1 = 100;
+	static int num2 = 200;
+	public void display() {
+		System.out.println("num1 :"+num1);
+		System.out.println("num2 :"+num2);
+	}
+	public void change()
+	{
+		num2++;
+	}
+	public static void main(String args[]) {
+		System.out.println("D1 object value");
+		Demo3 d1 = new Demo3();
+		Demo3 d2 = new Demo3();
+		
+		d1.change();
+		d1.display();
+		System.out.println("D2 object value");
+		d2.display();
+	}
+}
+
+=============================================================
+CALLING MAIN FUNCTION
+
+
+public class Demo4 {
+	public void d1() {
+		System.out.println("d1 called");
+	}
+	public void d2() {
+		d1();
+		System.out.println("d2 called");
+	}
+	public static void display() {
+		System.out.println("Display of Demo4 Called");
+	}
+	public static void main(String[] args) {
+		System.out.println("MAIN CALLED");
+		Demo4 de = new Demo4();
+		de.d2();
+		display();
+		de.display();
+	}
+}
+
+==============================================================
+IF LOOP:
+import java.util.Scanner;
+public class If {
+	
+	int  marks;
+	Scanner sc = new Scanner(System.in);
+	
+	public void display() {
+		System.out.println("Please enter your marks:");
+		marks = sc.nextInt();
+		
+		if (marks>33) {
+			System.out.println("CONGRATS! You have cleared the exam");
+		}
+		else {
+			System.out.println("SORRY! You have to Re-appear for the exam");
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		If i =new If();
+		i.display();
+
+	}
+
+}
+=============================================================
+ELSE IF STATEMENT:
+
+import java.util.Scanner;
+
+//multiple if (conditional )
+public class IfDemo {
+
+ int marks = 0;
+ String choice;
+ Scanner sc = new Scanner(System.in);
+
+ public void display() {
+	 do {
+  System.out.println("Please enter to marks to know the status : ");
+  marks = sc.nextInt();
+  
+  if (marks > 90 && marks < 100) {
+   System.out.println("CONGARTS !! YOU HAVE CLEARED THE EXAM WITH DISTINCTION");
+  } 
+  else  if (marks > 80 && marks < 90){
+   System.out.println("CONGARTS !! YOU HAVE CLEARED THE EXAM WITH GOOD MARKS");
+  }
+  else
+  {
+   System.out.println("SORRY !! YOU HAVE TO RE APPEAR FOR EXAM");   
+  }
+  System.out.println("Do u want to continue (Y for yes any key to exit);");
+  choice = sc.next();
+	 }while (choice.equalsIgnoreCase( "Y"));
+ }
+
+ public static void main(String[] args) {
+  System.out.println("PROGRAM STARTED");
+  IfDemo d = new IfDemo();
+  d.display();
+ }
+}
+===============================================================
+LOOP STATEMENT:
+FOR LOOP :
+
+public class Loop1 {
+	
+	int i;
+	public void display() {
+		for (i=1;i<5;i=i+3) {
+			System.out.println(i);
+			System.out.println("Welcome to DXC Chennai");
+			System.out.println("HII!!");
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Loop1 l = new Loop1();
+		l.display();
+
+	}
+================================================================
+WHILE LOOP :
+
+public class Loop2 {
+	
+		 int i=50;
+		       public void display()
+		       {
+		        while (i>0)
+		        {
+		         System.out.println(i);
+		         i=i-10;
+		        }
+		        
+		       }
+		 public static void main(String[] args) {
+		  // TODO Auto-generated method stub
+		       Loop2 l = new Loop2();
+		       l.display();
+		 }
+}
+
+===============================================================
+WHILE LOOP2:
+
+public class Loop3 {
+	
+		 int i=50;
+		       public void display()
+		       {
+		        while (i>0)
+		        {
+		         System.out.println(i);
+		         i=i-10;
+		        }
+		        
+		       }
+		 public static void main(String[] args) {
+		  // TODO Auto-generated method stub
+		       Loop3 l = new Loop3();
+		       l.display();
+		 }
+}
+
+===============================================================
+FOR LOOP:
+
+public class Loop4 {
+	public void demo() {
+		for(int i=1;i<=3;i++)
+		{
+			System.out.println(i+": Hello demo");
+			if(i == 2)
+			continue;
+			System.out.println(i+": Bye demo");
+		}
+	}
+	public static void main(String args[]) {
+		Loop4 l = new Loop4();
+		l.demo();
+		}
+}
+
+===============================================================
+ADDING TWO NUMBERS:
+
+import java.util.Scanner;
+
+public class Add {
+	
+	 Scanner sc = new Scanner(System.in);
+	 int num1, num2, result;
+	  public void sum()
+	  {
+	   System.out.print("Enter first number: ");
+	   num1 = sc.nextInt();
+	   System.out.print("Enter second number: ");
+	   num2 = sc.nextInt();
+	   result = num1 + num2;
+	   System.out.print("Result is:"+result);
+	   System.out.println("Result is: "+num1+"+"+num2+"="+result);
+   }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Add a = new Add();
+		a.sum();
+		
+
+	}
+
+}
+
+===============================================================
+AGE LIMIT:
+
+import java.util.Scanner;
+public class Agedemo {
+	
+	int age = 40;
+	public void accept() {
+		int age = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("please enter your age");
+		age = sc.nextInt();
+		
+		System.out.println("Age entered by you :"+age);
+		System.out.println("The age limit is:"+this.age);
+		}
+
+	public static void main(String[] args) {
+		Agedemo ag = new Agedemo();
+		ag.accept();
+		
+
+	}
+
+}
+===============================================================
+
+ARRAY DEMO :
+
+
+public class Arraydemo {
+	
+	int marks[] = new int[5];
+	String names[] = {"kamal","harsha","Gowtham","Vamsi","ram","siri"};
+	
+	public void display() {
+		
+		marks[3]=90;
+		System.out.println("Printing all the marks");
+		System.out.println(marks[0]);
+		System.out.println(marks[1]);
+		System.out.println(marks[2]);
+		System.out.println(marks[3]);
+		System.out.println(marks[4]);
+		
+		System.out.println("1.Printing all the names");
+		
+		for (int i = 0; i < 6; i++) {
+			System.out.println(names[i]);
+		}
+		System.out.println("2.Printing all the names -2");
+		
+		for (int i=0; i< names.length; i++) {
+			System.out.println(names[i]);
+		}
+		
+		System.out.println("3.Printing all the names:");
+			
+	}
+
+	public static void main(String[] args) {
+		Arraydemo a = new Arraydemo();
+		a.display();
+
+
+	}
+
+}
+==============================================================
+BREAK AND CONTINUE EXAMPLE :
+
+import java.util.Scanner;
+
+//accept three numbers ( 1 - 100 ) 
+// negative are entered , you exit
+// but if numbers are greater than 100 , then ignore
+/*
+ * Enter enter a number :3
+ * Enter enter a number :110 (continue)
+ * Enter enter a number :6
+ * 
+ * Result : 9
+ * 
+ * 2nd Scenario
+ *  Enter enter a number :3
+ * Enter enter a number :-110  (break)
+ * 
+ * Thanks 
+ * Result  : 3
+ */
+public class BreakDemoRealTimeExample {
+
+ Scanner sc = new Scanner(System.in);
+ int num,result; 
+ public void demo() {
+  for (int i = 1; i <= 3; i++) {
+    System.out.println("Enter a number : ");
+    num = sc.nextInt();
+    if( num > 100)
+      continue;
+    else if( num < 0)
+      break;
+    result += num;
+  }
+  System.out.println("Result is :"+result);
+ }
+
+ public static void main(String[] args) {
+  BreakDemoRealTimeExample d = new BreakDemoRealTimeExample();
+  d.demo();
+ }
+}
+
+================================================================
+CAR DEMO
+
+import java.util.Scanner;
+public class Car {
+	String color;
+	String modelNumber;
+	int price;
+	String carNumber;
+	
+	public void start() {
+		System.out.println("\nCar started is:"+modelNumber);
+		
+	}
+	public void stop() {
+		System.out.println("\nCar stopped is:"+modelNumber);
+	}
+	public void display() {
+		System.out.println("\n\t====Car Details===");
+		System.out.println("Car Number:"+carNumber);
+		System.out.println("Car Pice:"+price);
+		System.out.println("Car color:"+color);
+		System.out.println("Car Model Number:"+modelNumber);
+	}
+	public void acceptcardetails() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Please enter the car Number :");
+		carNumber = sc.next();
+		System.out.println("Please enter car price :");
+		price = sc.nextInt();
+		System.out.println("Please enter car color :");
+		color = sc.next();
+		System.out.println("Please enter car Model Number :");
+		modelNumber = sc.next();
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Car c = new Car();
+		c.acceptcardetails();
+		c.start();
+		c.stop();
+		c.display();
+
+	}
+
+}
+
+===============================================================
+CONSTANT.JAVA
+
+
+public class Constant {
+	
+	final int TOTAL_SCORE = 100;
+	public void sumnumbers() {
+		System.out.println("The maximumscore is:"+TOTAL_SCORE);
+	
+	}
+	public static void main(String[] args) {
+	Constant c = new Constant();
+	c.sumnumbers();
+	}
+
+}
+
+===============================================================
+CONSTANT DEMO2 :
+
+import java.util.Scanner;
+public class ConstDemo {
+
+	 
+	 int id = 100;
+	 String name = "Abishek";
+
+	 public ConstDemo() {
+
+	  System.out.println("from ConstDemo");
+	  id = 200;
+	  name = "ball";
+	 }
+
+	 public ConstDemo(int id, String name) {
+
+	  System.out.println("from ConstDemo");
+	  this.id = id;
+	  this.name = name;
+	 }
+
+	 public void disp() {
+	  System.out.println("helllo from display");
+	  System.out.println(" a : " + id);
+	  System.out.println("name : " + name);
+	 }
+
+	 public static void main(String[] args) {
+	  Scanner sc = new Scanner(System.in);
+	  System.out.println("Hi abishek, please enter number and string");
+	  int i = sc.nextInt();
+	  String n = sc.next();
+	  ConstDemo x = new ConstDemo();
+	  ConstDemo x2 = new ConstDemo(i, n);
+	  x.disp();
+	  x2.disp();
+	 }
+	}
+
+
+================================================================
+MARKS WITH ? DEMO :
+
+
+public class Marks {
+	
+		 int mark1=45;
+		 String result;
+		 public void display() {
+		  result=mark1>33 ? "pass" : "fail";
+		  System.out.println("result is:"+result);
+		  
+		 }
+
+		 public static void main(String[] args) {
+		 Marks m=new Marks();
+		 m.display();
+
+		 }
+
+		}
+
+==============================================================
+READING DATA :
+
+import java.util.Scanner;
+
+public class Readprogram {
+	Scanner sc = new Scanner(System.in);
+	int employeeAge=0;
+	String employeeName;
+	public void display() {
+		
+		System.out.print("please enter your age");
+		employeeAge = sc.nextInt();
+		
+		System.out.print("please enter your name");
+		employeeName = sc.next();
+		
+		System.out.println(employeeName +",your age is:"+employeeAge);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Readprogram r = new Readprogram();
+		r.display();
+
+	}
+
+}
+
+==============================================================
+READING DATA ASSIGNMENT:
+
+import java.util.Scanner;
+
+//real time use case 
+public class ReadProgramAssignment {
+
+ Scanner sc = new Scanner(System.in);
+ int employeeAge = 0;
+ String employeeName;
+ String choice;
+
+ public void display() {
+
+  do {
+   System.out.print("Please enter your age :");
+   employeeAge = sc.nextInt();
+   System.out.print("Please enter your name :");
+   employeeName = sc.next();
+   System.out.println(employeeName + " , your age is : " + employeeAge);
+
+   System.out.println("Do u want to continue (Y for yes any key to exit);");
+   choice = sc.next();
+  } while (choice.equalsIgnoreCase( "Y"));
+
+  System.out.println("Thanks for using my program");
+ }
+
+ public static void main(String[] args) {
+  ReadProgramAssignment r = new ReadProgramAssignment();
+  r.display();
+
+ }
+}
+
+================================================================
+DATA TYPES SIZE PROGRAM :
+
+public class Size {
+	
+	byte roll=127;
+	short salary=200;
+	int grade=20000;
+	long budget=8928;
+	float percent=9.6f;
+	char alphabet='j';
+	double amount=987.67d;
+	String name="K";
+	
+	public void display()
+	  {
+	    System.out.println("default size of byte: " +roll );
+	    System.out.println("default size of short: " + salary );
+	    System.out.println("default size of int: " + grade);
+	    System.out.println("default size of long: " +budget);
+	    System.out.println("default size of char: " + alphabet);
+	    System.out.println("default size of float: " + percent);
+	    System.out.println("default size of double: " + amount);
+	    System.out.println("default size of string:" +name);
+	  }
+	public static void main(String args[]) {
+		Size v= new Size();
+		v.display();
+	}
+}
+
+==============================================================
+SWITCH EXAMPLE:
+
+import java.util.Scanner;
+public class Switch {
+	
+	int month = 0;
+	Scanner sc = new Scanner(System.in);
+	public void display() {
+		System.out.println("Enter the Month as 1-12:");
+		month = sc.nextInt();
+		switch (month) {
+		case 1:
+			System.out.println("This is january");
+			break;
+		case 2:
+			System.out.println("This is Febraury");
+			break;
+		case 3:
+			System.out.println("This is march");
+			break;
+		case 4:
+			System.out.println("This is April");
+			break;
+		case 5:
+			System.out.println("This is may");
+			break;
+		case 6:
+			System.out.println("This is june");
+			break;
+		default:
+			System.out.println("Invalid");
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Switch s = new Switch();
+		s.display();
+
+	}
+
+}
+
+===============================================================
